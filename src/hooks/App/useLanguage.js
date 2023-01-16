@@ -1,7 +1,7 @@
-import { LANGUAGES } from "library/constant";
+import { LANGUAGES } from "../../library/constant";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setRefresh } from "store/reducers/setting/settingSlice";
+import { setRefresh } from "../../store/reducers/setting/settingSlice";
 
 const useLanguage = () => {
   const lang = useSelector((state) => state.setting.lang);
@@ -16,19 +16,16 @@ const useLanguage = () => {
     );
 
     if (lang === "en") {
+      document.title = "Page title";
 
-      document.title = "Dexpal - DEX aggregator on Ethereum, Binance Smart Chain, Polygon";
-
-      document.body.classList.remove("font-fa")
+      document.body.classList.remove("font-fa");
     }
 
     if (lang === "fa") {
+      document.title = "Page title";
 
-      document.title = "دکس پال - اولین صرافی غیر متمرکز ارزهای دیجیتال در ایران - Dexpal";
-
-      document.body.classList.add("font-fa")
+      document.body.classList.add("font-fa");
     }
-
   }, [lang, dispatch]);
 };
 

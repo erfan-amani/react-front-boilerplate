@@ -1,7 +1,6 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-import process from "process";
 import fa from "./fa";
 import en from "./en";
 
@@ -19,7 +18,7 @@ i18n
       },
     },
     fallbackLng: "en",
-    debug: process?.env?.NODE_ENV === "development",
+    debug: import.meta.env?.MODE === "development",
 
     // have a common namespace used around the full app
     ns: ["translations"],
