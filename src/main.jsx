@@ -7,6 +7,7 @@ import App from "./App";
 import setupAxios from "./library/setupAxios";
 import axios from "./library/http";
 import "./locales/index";
+import "./index.css";
 
 setupAxios(axios, store);
 

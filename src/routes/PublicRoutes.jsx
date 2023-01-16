@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 const publicRoutes = [
   {
     path: "/",
-    component: () => <div>Main Page</div>,
+    component: () => <h1 className="text-3xl font-bold">Hello world!</h1>,
   },
 ];
 
